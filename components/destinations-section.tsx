@@ -2,30 +2,10 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
+import { getAllDestinations } from "@/lib/destinations-data"
 
-const destinations = [
-  {
-    id: 1,
-    title: "Paris 1889",
-    tagline: "La Belle Époque",
-    price: "Dès 4 500 €",
-    image: "https://zpgoxmvadlcsfvipggpf.supabase.co/storage/v1/object/public/TimeTravelMedia/Paris_Hero_16x9.png",
-  },
-  {
-    id: 2,
-    title: "Période Crétacé",
-    tagline: "Les Géants du Passé",
-    price: "Dès 6 200 €",
-    image: "https://zpgoxmvadlcsfvipggpf.supabase.co/storage/v1/object/public/TimeTravelMedia/Cretace_Hero_16x9.png",
-  },
-  {
-    id: 3,
-    title: "Florence 1504",
-    tagline: "Art de la Renaissance",
-    price: "Dès 5 000 €",
-    image: "https://zpgoxmvadlcsfvipggpf.supabase.co/storage/v1/object/public/TimeTravelMedia/Florence_Hero_16x9.png",
-  },
-]
+const destinations = getAllDestinations()
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -78,12 +58,15 @@ export function DestinationsSection() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
         >
           {destinations.map((destination) => (
-            <motion.div
+            <Link
               key={destination.id}
-              variants={cardVariants}
-              whileHover={{ y: -10 }}
-              className="group relative rounded-2xl overflow-hidden bg-slate-900/50 backdrop-blur-sm border border-slate-800/50 hover:border-amber-500/30 transition-all duration-500 cursor-pointer"
+              href={`/destinations/${destination.id}`}
             >
+              <motion.div
+                variants={cardVariants}
+                whileHover={{ y: -10 }}
+                className="group relative rounded-2xl overflow-hidden bg-slate-900/50 backdrop-blur-sm border border-slate-800/50 hover:border-amber-500/30 transition-all duration-500 cursor-pointer"
+              >
               {/* Image Container */}
               <div className="relative h-80 md:h-96 overflow-hidden">
                 <Image
@@ -130,6 +113,7 @@ export function DestinationsSection() {
               {/* Glassmorphism highlight effect */}
               <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
+            </Link>
           ))}
         </motion.div>
       </div>
