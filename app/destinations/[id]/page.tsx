@@ -310,9 +310,11 @@ export default function DestinationPage({ params }: DestinationPageProps) {
                     <p className="text-sm text-slate-400 mb-4">
                       Nos experts en voyage temporel sont à votre disposition pour répondre à toutes vos questions.
                     </p>
-                    <Button variant="outline" className="w-full border-amber-500/30 text-amber-500 hover:bg-amber-500/10">
-                      Contacter un Expert
-                    </Button>
+                    <Link href="/contact">
+                      <Button variant="outline" className="w-full border-amber-500/30 text-amber-500 hover:bg-amber-500/10">
+                        Contacter un Expert
+                      </Button>
+                    </Link>
                   </CardContent>
                 </Card>
               </motion.div>

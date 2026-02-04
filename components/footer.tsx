@@ -5,10 +5,9 @@ import Link from "next/link"
 
 const footerLinks = {
   destinations: [
-    { label: "Rome Antique", href: "#" },
-    { label: "Londres Victorien", href: "#" },
-    { label: "Ère Jurassique", href: "#" },
-    { label: "Italie Renaissance", href: "#" },
+    { label: "Paris 1889", href: "/destinations/paris-1889" },
+    { label: "Période Crétacé", href: "/destinations/cretace" },
+    { label: "Florence 1504", href: "/destinations/florence-1504" },
   ],
   company: [
     { label: "À Propos", href: "#" },
@@ -17,8 +16,8 @@ const footerLinks = {
     { label: "Presse", href: "#" },
   ],
   support: [
-    { label: "Contact", href: "#contact" },
-    { label: "FAQ", href: "#" },
+    { label: "Contact", href: "/contact" },
+    { label: "FAQ", href: "/faq" },
     { label: "Conditions Générales", href: "#" },
     { label: "Politique de Confidentialité", href: "#" },
   ],

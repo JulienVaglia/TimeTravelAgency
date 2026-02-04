@@ -47,13 +47,19 @@ export function Header() {
               Destinations
             </Link>
             <Link
+              href="/quiz"
+              className="text-white font-medium hover:text-amber-500 transition-colors text-sm tracking-wide drop-shadow-lg"
+            >
+              Quiz
+            </Link>
+            <Link
               href="/#features"
               className="text-white font-medium hover:text-amber-500 transition-colors text-sm tracking-wide drop-shadow-lg"
             >
               Services
             </Link>
             <Link
-              href="/#contact"
+              href="/contact"
               className="text-white font-medium hover:text-amber-500 transition-colors text-sm tracking-wide drop-shadow-lg"
             >
               Contact
@@ -92,6 +98,13 @@ export function Header() {
                 Destinations
               </Link>
               <Link
+                href="/quiz"
+                className="text-white font-medium hover:text-amber-500 transition-colors px-4"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Quiz
+              </Link>
+              <Link
                 href="/#features"
                 className="text-white font-medium hover:text-amber-500 transition-colors px-4"
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -99,7 +112,7 @@ export function Header() {
                 Services
               </Link>
               <Link
-                href="/#contact"
+                href="/contact"
                 className="text-white font-medium hover:text-amber-500 transition-colors px-4"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
