@@ -11,7 +11,6 @@ const _playfair = Playfair_Display({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: 'TimeTravel Agency | Voyage Temporel de Luxe',
   description: "Vivez le passé comme jamais auparavant...",
-  generator: 'v0.app',
   icons: {
     icon: '/favicon.svg',
     apple: '/favicon.svg',
