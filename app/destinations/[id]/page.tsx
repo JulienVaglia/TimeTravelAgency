@@ -59,23 +59,24 @@ export default function DestinationPage({ params }: DestinationPageProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <Link 
-                href="/#destinations"
-                className="inline-flex items-center gap-2 text-amber-500 hover:text-amber-400 transition-colors mb-6"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                <span>Retour aux destinations</span>
-              </Link>
-              
               <span className="inline-block text-amber-500 text-sm tracking-[0.3em] uppercase mb-4">
                 {destination.tagline}
               </span>
               <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white mb-4">
                 {destination.title}
               </h1>
-              <p className="text-xl text-slate-300 max-w-3xl">
+              <p className="text-xl text-slate-300 max-w-3xl mb-6">
                 {destination.description}
               </p>
+              <Link href="/#destinations">
+                <Button 
+                  variant="outline" 
+                  className="border-amber-500/50 text-amber-500 hover:bg-amber-500/10 hover:border-amber-500"
+                >
+                  <ArrowLeft className="w-4 h-4 mr-2" />
+                  Retour aux destinations
+                </Button>
+              </Link>
             </motion.div>
           </div>
         </div>
@@ -288,9 +289,11 @@ export default function DestinationPage({ params }: DestinationPageProps) {
                       </ul>
                     </div>
 
-                    <Button className="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-medium py-6">
-                      Réserver Maintenant
-                    </Button>
+                    <Link href="/reservation">
+                      <Button className="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-medium py-6">
+                        Réserver Maintenant
+                      </Button>
+                    </Link>
 
                     <p className="text-xs text-center text-slate-500 mt-4">
                       Annulation gratuite jusqu'à 30 jours avant le départ

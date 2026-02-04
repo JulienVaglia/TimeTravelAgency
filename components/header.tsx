@@ -41,26 +41,28 @@ export function Header() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <Link
-              href="#destinations"
-              className="text-slate-300 hover:text-amber-500 transition-colors text-sm tracking-wide"
+              href="/#destinations"
+              className="text-white font-medium hover:text-amber-500 transition-colors text-sm tracking-wide drop-shadow-lg"
             >
               Destinations
             </Link>
             <Link
-              href="#features"
-              className="text-slate-300 hover:text-amber-500 transition-colors text-sm tracking-wide"
+              href="/#features"
+              className="text-white font-medium hover:text-amber-500 transition-colors text-sm tracking-wide drop-shadow-lg"
             >
               Services
             </Link>
             <Link
-              href="#contact"
-              className="text-slate-300 hover:text-amber-500 transition-colors text-sm tracking-wide"
+              href="/#contact"
+              className="text-white font-medium hover:text-amber-500 transition-colors text-sm tracking-wide drop-shadow-lg"
             >
               Contact
             </Link>
-            <button className="px-6 py-2 border border-amber-500 text-amber-500 rounded-full hover:bg-amber-500 hover:text-slate-950 transition-all duration-300 text-sm tracking-wide">
-              Réserver
-            </button>
+            <Link href="/reservation">
+              <button className="px-6 py-2 border border-amber-500 text-amber-500 rounded-full hover:bg-amber-500 hover:text-slate-950 transition-all duration-300 text-sm tracking-wide font-medium">
+                Réserver
+              </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -83,30 +85,32 @@ export function Header() {
           >
             <div className="flex flex-col gap-4 py-6">
               <Link
-                href="#destinations"
-                className="text-slate-300 hover:text-amber-500 transition-colors px-4"
+                href="/#destinations"
+                className="text-white font-medium hover:text-amber-500 transition-colors px-4"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Destinations
               </Link>
               <Link
-                href="#features"
-                className="text-slate-300 hover:text-amber-500 transition-colors px-4"
+                href="/#features"
+                className="text-white font-medium hover:text-amber-500 transition-colors px-4"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Services
               </Link>
               <Link
-                href="#contact"
-                className="text-slate-300 hover:text-amber-500 transition-colors px-4"
+                href="/#contact"
+                className="text-white font-medium hover:text-amber-500 transition-colors px-4"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact
               </Link>
               <div className="px-4">
-                <button className="w-full px-6 py-2 border border-amber-500 text-amber-500 rounded-full hover:bg-amber-500 hover:text-slate-950 transition-all duration-300">
-                  Réserver
-                </button>
+                <Link href="/reservation">
+                  <button className="w-full px-6 py-2 border border-amber-500 text-amber-500 rounded-full hover:bg-amber-500 hover:text-slate-950 transition-all duration-300 font-medium">
+                    Réserver
+                  </button>
+                </Link>
               </div>
             </div>
           </motion.div>
