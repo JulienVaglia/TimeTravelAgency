@@ -232,6 +232,7 @@ Le projet est configuré pour un **déploiement automatique sur Netlify** :
 1. Connexion du repository GitHub à Netlify
 2. Configuration des variables d'environnement
 3. Auto-déploiement à chaque push sur `main`
+4. Lien vers le site déployé : https://luxurytimetravel.netlify.app/
 
 **Build command** : `pnpm build`  
 **Output directory** : `.next`

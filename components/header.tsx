@@ -24,15 +24,15 @@ export function Header() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-slate-950/80 backdrop-blur-lg border-b border-amber-500/20"
-          : "bg-transparent"
+          ? "bg-slate-950/90 backdrop-blur-lg border-b border-amber-500/30"
+          : "bg-slate-950/5 backdrop-blur-md border-b border-amber-500/10"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-amber-500/20 border border-amber-500/50 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-full bg-amber-500/30 border border-amber-500/70 flex items-center justify-center backdrop-blur-sm shadow-lg shadow-amber-500/20">
               <Clock className="w-5 h-5 text-amber-500" />
             </div>
             <span className="font-serif text-xl text-white">TimeTravel</span>
@@ -65,7 +65,7 @@ export function Header() {
               Contact
             </Link>
             <Link href="/reservation">
-              <button className="px-6 py-2 border border-amber-500 text-amber-500 rounded-full hover:bg-amber-500 hover:text-slate-950 transition-all duration-300 text-sm tracking-wide font-medium">
+              <button className="px-6 py-2 border-2 border-amber-500 bg-amber-500/10 text-amber-500 rounded-full hover:bg-amber-500 hover:text-slate-950 transition-all duration-300 text-sm tracking-wide font-medium shadow-lg shadow-amber-500/20 backdrop-blur-sm">
                 Réserver
               </button>
             </Link>
@@ -87,7 +87,7 @@ export function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-slate-950/95 backdrop-blur-lg border-t border-amber-500/20"
+            className="md:hidden bg-slate-950/95 backdrop-blur-xl border-t border-amber-500/30"
           >
             <div className="flex flex-col gap-4 py-6">
               <Link
@@ -120,7 +120,7 @@ export function Header() {
               </Link>
               <div className="px-4">
                 <Link href="/reservation">
-                  <button className="w-full px-6 py-2 border border-amber-500 text-amber-500 rounded-full hover:bg-amber-500 hover:text-slate-950 transition-all duration-300 font-medium">
+                  <button className="w-full px-6 py-2 border-2 border-amber-500 bg-amber-500/10 text-amber-500 rounded-full hover:bg-amber-500 hover:text-slate-950 transition-all duration-300 font-medium shadow-lg shadow-amber-500/20">
                     Réserver
                   </button>
                 </Link>
